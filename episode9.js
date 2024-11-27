@@ -3,12 +3,13 @@ const a=100;
 
 
 setImmediate(()=>console.log("setImmediate"));
-
+Promise.resolve().then(()=>console.log("Promise"));
 fs.readFile("./file.txt","utf8",()=>{
     console.log("File is reading ");
 });
 
-setTimeout(()=>console.log("Timeout expired"),0);
+setTimeout(()=>console.log("Timeout expired"),5);
+process.nextTick(()=>console.log("process.nextTick"));
 
 function printa(){
     console.log("a= ",a);
