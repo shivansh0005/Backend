@@ -3,7 +3,7 @@ const a=100;
 
 
 setImmediate(()=>console.log("setImmediate"));
-Promise.resolve().then(()=>console.log("Promise"));
+Promise.resolve("promise").then(()=>console.log("Promise"));
 fs.readFile("./file.txt","utf8",()=>{
     console.log("File is reading ");
 });
